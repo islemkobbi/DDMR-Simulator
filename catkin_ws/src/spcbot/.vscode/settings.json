@@ -1,0 +1,10 @@
+{
+    "python.autoComplete.extraPaths": [
+        "/opt/ros/noetic/lib/python3/dist-packages"
+    ],
+    "python.analysis.extraPaths": [
+        "/opt/ros/noetic/lib/python3/dist-packages"
+    ],
+    "cmake.sourceDirectory": "/home/ik/catkin_ws/src/spcbot/spcbot_description",
+    "cmake.configureOnOpen": true
+}

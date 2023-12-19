@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+
+<launch>
+  <include file="$(find gazebo_ros)/launch/empty_world.launch">
+    <arg name="world_name" value="$(find spcbot_gazebo)/worlds/random.world"/>
+    <arg name="paused" value="false"/>
+    <arg name="use_sim_time" value="true"/>
+    <arg name="gui" value="true"/>
+    <arg name="recording" value="false"/>
+    <arg name="debug" value="false"/>
+  </include>
+
+  <param name="robot_description" command="xacro $(find spcbot_description)/urdf/spcbot.xacro" />
+  <node name="spawn_urdf" pkg="gazebo_ros" type="spawn_model" output="screen"
+  args="-param robot_description -urdf -model spcbot" />
+
+</launch>
