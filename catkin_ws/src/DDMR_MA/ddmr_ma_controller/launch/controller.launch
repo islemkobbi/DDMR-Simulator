@@ -1,0 +1,52 @@
+<?xml version="1.0"?>
+
+<launch>
+
+  <include file="$(find ddmr_ma_gazebo)/launch/ddmr_ma_gazebo.launch">
+  </include>
+
+  <node name="ref_update" pkg="ddmr_ma_controller" type="ref_update.py">
+  </node>
+
+  <!-- 1st Robot -->
+  <node name="r1_robot_controller" pkg="ddmr_ma_controller" type="r1_robot_controller.py">
+  </node>
+
+  <node name="r1_ekf" pkg="ddmr_ma_controller" type="r1_ekf.py">
+  </node>
+
+  <node name="r1_sensors_output" pkg="ddmr_ma_controller" type="r1_sensors_output.py">
+  </node>
+
+  <node name="r1_qr_policy" pkg="ddmr_ma_controller" type="r1_qr_policy.py">
+  </node>
+
+  <!-- 2nd Robot -->
+  <node name="r2_robot_controller" pkg="ddmr_ma_controller" type="r2_robot_controller.py">
+  </node>
+
+  <node name="r2_ekf" pkg="ddmr_ma_controller" type="r2_ekf.py">
+  </node>
+
+  <node name="r2_sensors_output" pkg="ddmr_ma_controller" type="r2_sensors_output.py">
+  </node>
+
+  <node name="r2_qr_policy" pkg="ddmr_ma_controller" type="r2_qr_policy.py">
+  </node>
+
+  <!-- 3rd Robot -->
+  <node name="r3_robot_controller" pkg="ddmr_ma_controller" type="r3_robot_controller.py">
+  </node>
+
+  <node name="r3_ekf" pkg="ddmr_ma_controller" type="r3_ekf.py">
+  </node>
+
+  <node name="r3_sensors_output" pkg="ddmr_ma_controller" type="r3_sensors_output.py">
+  </node>
+
+  <node name="r3_qr_policy" pkg="ddmr_ma_controller" type="r3_qr_policy.py">
+  </node>
+
+
+
+</launch>

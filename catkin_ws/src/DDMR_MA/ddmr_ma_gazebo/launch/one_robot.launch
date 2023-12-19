@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+
+<launch>
+    <arg name="robot_name"/>
+    <arg name="init_pose"/>
+
+    <node name="spawn_minibot_model" pkg="gazebo_ros" type="spawn_model"
+     args="$(arg init_pose) -urdf -param /ddmr_ma_description -model $(arg robot_name) -z 0.078362"
+     respawn="false" output="screen" />
+
+</launch>
